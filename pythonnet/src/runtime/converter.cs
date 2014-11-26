@@ -174,13 +174,12 @@ namespace Python.Runtime {
                 return Runtime.PyLong_FromUnsignedLongLong((ulong)value);
 
             default:
-	        if (value is IEnumerable)
-                {
+	            if (value is IEnumerable) {
                     var resultlist = new PyList();
-                    foreach (object o in (IEnumerable)value)
-                    {
+                    foreach (object o in (IEnumerable)value) {
                         resultlist.Append(new PyObject(ToPython(o, o.GetType())));
                     }
+                    Runtime.Incref(resultlist.Handle);
                     return resultlist.Handle;
                 }
                 result = CLRObject.GetInstHandle(value, type);
