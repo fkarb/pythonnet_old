@@ -1,3 +1,14 @@
+DON'T USE THIS FORK!
+====================
+
+This fork was originated from the subversion repository, ported to Python3 and had a load of new features added.
+
+Since that work started the main pythonnet repository has been moved from subversion to github independently of this fork.
+
+A new repository has been created (renshawbay/pythonnet) which contains all of the new features and Python 3 work from this fork, but rebased on the pythonnet/pythonnet repository.
+
+It is recommended that you switch to the python3 branch of that repository as that will be the one that's maintained and developed.
+
 pythonnet
 =========
 
